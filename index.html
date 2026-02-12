@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nossa História Fofa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Imports Kawaii Fonts: Fredoka (Headings), Quicksand (Body), Patrick Hand (Handwriting) -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Patrick+Hand&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Pastel Kawaii Palette
+              kawaii: {
+                pink: '#FFB7B2',
+                pinkLight: '#FFDAC1',
+                purple: '#E2F0CB', // Using green as purple variant for contrast or swap names
+                lavender: '#E0BBE4',
+                mint: '#B5EAD7',
+                blue: '#C7CEEA',
+                cream: '#FFFdf9',
+                dark: '#5D5455', // Softer black
+                hotpink: '#FF69B4',
+              }
+            },
+            fontFamily: {
+              heading: ['"Fredoka"', 'sans-serif'],
+              body: ['"Quicksand"', 'sans-serif'],
+              hand: ['"Patrick Hand"', 'cursive'],
+            },
+            animation: {
+              'float': 'float 4s ease-in-out infinite',
+              'bounce-slow': 'bounce 3s infinite',
+              'wiggle': 'wiggle 1s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+              },
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              }
+            },
+            boxShadow: {
+              'kawaii': '4px 4px 0px 0px rgba(0,0,0,0.1)',
+              'kawaii-hover': '6px 6px 0px 0px rgba(0,0,0,0.15)',
+              'inner-cute': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #FFF0F5; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #FFB7B2; 
+        border-radius: 10px;
+        border: 3px solid #FFF0F5;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #FF69B4; 
+      }
+      
+      body {
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23FF69B4"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') 12 12, auto;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?deps=react@18.3.1",
+    "react-confetti": "https://esm.sh/react-confetti@6.1.0?deps=react@18.3.1",
+    "framer-motion": "https://esm.sh/framer-motion@11.0.8?deps=react@18.3.1,react-dom@18.3.1",
+    "react-use": "https://esm.sh/react-use@17.5.0?deps=react@18.3.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-white text-kawaii-dark antialiased overflow-x-hidden font-body selection:bg-kawaii-pink selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
